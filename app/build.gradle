@@ -7,6 +7,9 @@ android {
     namespace 'com.example.chsb_project'
     compileSdk 33
 
+    buildFeatures{
+        viewBinding true
+    }
     defaultConfig {
         applicationId "com.example.chsb_project"
         minSdk 25
