@@ -36,6 +36,8 @@ class Registration : AppCompatActivity() {
                 val userEmail = binding.email.text.toString()
                 val userPhone = binding.phone.text.toString()
                 val userPassword = binding.password.text.toString()
+                val userBvn = binding.bvn.text.toString()
+                val accauntNumber = binding.accauntNumber.text.toString()
                 val str = getPreferences.getString("Users", "")
 
                 if (str == "") {
@@ -43,7 +45,7 @@ class Registration : AppCompatActivity() {
                 } else {
                     userList = gson.fromJson(str, type)
                 }
-                userList.add(User(userEmail, userName, userPassword, userPhone))
+                userList.add(User(userEmail, userName, userPassword, userPhone, userBvn, accauntNumber))
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
